@@ -1,0 +1,235 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:serif !important;
+    font-weight: bold !important;
+}
+.navbar .collapse .menus{
+    margin-left: auto;
+}
+.navbar .navbar-brand{
+    font-size: 24px;
+    color: white !important;
+}
+.navbar .collapse .navbar-nav .signup{
+    border-radius: 50px;
+padding: 7px 17px;
+background: rgb(9,9,121);
+background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(15,185,219,1) 100%);
+color: white;
+text-decoration: none;
+}
+.navbar .collapse .navbar-nav .login{
+    border-radius: 50px;
+padding: 7px 17px !important;
+background: rgb(9,9,121);
+color: white;
+text-decoration: none;
+background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(15,185,219,1) 100%);
+/* margin-left: 10px; */
+}
+.navbar .collapse .navbar-nav .login, .signup{
+ margin: 6px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-left: 20px;
+    font-family: sans-serif !important;
+    color: white !important;
+    opacity: 0.7;
+}
+.navbar .menus .active_class {
+    color: white !important;
+    opacity: 1;
+    /* color: red; */
+}
+.category .title h2{
+    margin-top: 65px !important;
+}
+.category .loading1{
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+
+/* work */
+.work-section{
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+}
+.work-section .loading{
+    text-align: center;
+    padding-top: 160px;
+    padding-bottom: 150px;
+}
+.work-section .title .item{
+    float: right !important;
+    font-size: 16px !important;
+    font-family: sans-serif !important;
+    text-decoration: underline !important;
+}
+.work-section .title h2{
+    margin-top: 65px !important;
+}
+.work-section .full .icon .icon1{
+    font-size: 34px;
+    color: rgb(41, 41, 206) !important;
+}
+.work-section .title h2{
+    font-family: revert;
+}
+.work-section .full .icon{
+    width: 55px;
+    height: 55px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(189, 185, 185, 0.788);
+}
+
+
+/* code chaange backgrbd color when scroll screen  window */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.863);
+    background-color: rgb(47, 47, 194);
+    z-index: 1000;
+}
+
+.navbar.active{
+    background-color: rgb(57, 57, 185);
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border: 1px solid white !important;
+ 
+}
+
+/* catagery */
+
+.card-img, .card-img-top {
+    height: 200px !important;
+    border-top-left-radius: var(--bs-card-inner-border-radius);
+    border-top-right-radius: var(--bs-card-inner-border-radius);
+}
+
+/* category */
+.category a{
+  text-decoration: none !important;
+}
+.category .full{
+    padding: 70px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: rgb(53, 87, 179);
+    color: #fff;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../src/assets/image/electronic.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal .modal-header img{
+    width: 60%;
+    text-align: center !important;
+}
+.menu_list_section .MuiButton-label {
+    width: 100%;
+    display: inherit;
+    font-weight: bold !important;
+    align-items: inherit;
+    justify-content: inherit;
+}
+.menu_list_section .title h2{
+    margin-top: 88px !important;
+}
+/* signup_section */
+
+.signup_section .full{
+    max-width: 750px;
+    margin: auto;
+    padding: 22px;
+    margin-top: 33px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 32%, rgba(0,212,255,1) 100%);
+    
+}
+.signup_section .full .btn{
+    width: 50%;
+    height: 44px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto !important;
+    display: block;
+    background-color: white;
+    color:  #0389CE !important ;
+}
+.signup_section .title h3{
+    margin-top: 112px !important;
+}
+.signup_section label{
+   color: #fff !important;
+}
+/* form validation */
+.signup_section .form_error{
+    color: red;
+}
+/* login_section */
+
+.login_section .full{
+    max-width: 750px;
+    margin: auto;
+    padding: 22px;
+    margin-top: 33px;
+    border-radius: 6px;
+    /* background-color: rgb(74, 74, 192); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgb(2,0,36);
+background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,22,121,1) 34%, rgba(0,212,255,1) 100%);
+}
+.login_section .full .btn{
+    width: 50%;
+    height: 44px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto !important;
+    display: block;
+    background-color: white;
+    color:  #0389CE !important ;
+}
+.login_section .title h3{
+    margin-top:109px !important;
+}
+.login_section table{
+    max-width: 750px;
+    margin: auto;
+    border-radius: 4px !important;
+    margin-top: 112px !important;
+    overflow: scroll !important;
+}
+
+/* form validation */
+.login_section .form_error{
+    color: red;
+}
+.login_section label{
+    color: #fff !important;
+ }
+/* footer */
+.footer{
+    margin-bottom: 0px;
+    position: relative;
+    background-color: rgba(10, 8, 141, 0.932);
+    color: white;
+}
+.footer p{
+   margin-top: 2px;
+}
