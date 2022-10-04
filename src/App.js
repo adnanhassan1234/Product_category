@@ -16,6 +16,7 @@ const App = () => {
         <Route exact path='/product/:id' component={Home} />
         <Route exact path='/signUp' component={SignUp} />
         <Route exact path='/login' component={Login} />
+        <Route exact path='/welcome' component={Login} />
         <Redirect to='category' />
       </Switch>
       <Footer />
