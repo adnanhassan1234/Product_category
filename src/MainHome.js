@@ -7,15 +7,25 @@ function MainHome() {
     const [loading, setLoading] = useState(false);
 
     
-    useEffect(() => {             // create .env file
-        fetch(process.env.REACT_APP_BASEURL + "/products/categories").then((result) => {
-            result.json().then((response) => {
-                console.log("🚀 ~ file: MainHome.js ~ line 13 ~ result.json ~ response", response);
-                setCategories(response);
-                setLoading(true);  // Loading for Safety
-            })
-        })
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch(`${process.env.REACT_APP_BASEURL}/products/categories`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log("🚀 ~ file: MainHome.js ~ line 13 ~ result.json ~ response", data);
+                setCategories(data);
+                setLoading(true);
+            } catch (error) {
+                console.error(error);
+                setLoading(false);
+            }
+        };
+        fetchCategories();
     }, []);
+    
 
     return (
         //   All category

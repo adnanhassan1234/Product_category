@@ -1,36 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
+import SingleData from './Components/SingleData';
 
 
 const Box = (props) => {
 
+    const [show, setShow] = useState(false);
+    const [selectedData, setSelectedData] = useState({});
+
+    const selectedFunction = (item) => {
+        console.log(item);
+        if (show == true) {
+          setShow(false);
+          setSelectedData({});
+        } else {
+          setShow(true);
+          setSelectedData(item);
+        }
+      };
+
     return (
         <>
 
-            {/* <!-- Modal --> */}
-            <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div className="modal-dialog  modal-dialog-scrollable">
-                    <div className="modal-content">
-
-                        <div className="modal-header">
-                            <div className="imgs">
-                                <img alt="" src={props.image} />
-                            </div>
-                            <h5 className="modal-title" id="staticBackdropLabel"> {props.title}</h5>
-                        </div>
-                        <div className="modal-body">
-                            {props.description}
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                     {/* close model */}
-
+    
                         {/* start API data */}
             <div className="col-lg-4 col-md-6 col-12">
                 <div className="full  p-3">
@@ -45,12 +38,13 @@ const Box = (props) => {
                                 <Card.Text>
                                     <span> <strong>Price</strong>  </span> <span style={{ float: 'right', fontWeight: 'bold', color: 'red' }}> {props.price}   </span>
                                 </Card.Text>
-                                <Button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" variant="primary"> More Details </Button>
+                                <Button type="button" className="btn btn-primary"  onClick={() => selectedFunction(props)}> More Details </Button>
                             </Card.Body>
                         </div>
                     </Card>
                 </div>
             </div>
+            <SingleData show={show} selectedData={selectedData} onHide={() => setShow(false)} />
         </>
     )
 }
